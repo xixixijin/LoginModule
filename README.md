@@ -1,0 +1,6 @@
+# LoginModule
+此项目是根据token机制实现的登录权限校验，因为在分布式环境中不适合使用session来保存用户登录状态而且微服务架构需要的是无状态的服务。
+项目基于Spring Boot+MyBatis，Redis，MySQL，可用于其他项目，使用maven工具打包。
+项目中使用的是Spring的Interceptor来拦截指定的需要权限验证的请求。通过校验用户id和token来实现登录权限验证。
+用于权限验证的信息可以放在请求头或者cookie中，token存在Redis中，通过对比Redis中的token来实现轻量级的可靠认证，适合分布式环境。
+token会定期更新持久化到MySQL中。
