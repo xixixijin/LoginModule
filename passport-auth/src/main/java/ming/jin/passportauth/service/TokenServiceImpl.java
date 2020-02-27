@@ -8,8 +8,7 @@ import org.springframework.util.StringUtils;
 /**
  * @author Haokun
  * @date 2020/2/26 16:40
- * <p>
- * LoginModule
+ *
  */
 @Service
 public class TokenServiceImpl implements TokenService {

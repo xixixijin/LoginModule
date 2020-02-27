@@ -5,15 +5,23 @@ import java.util.Date;
 
 /**
  * @author Haokun
- * @date 2020/2/26 16:21
- * <p>
- * LoginModule
  */
 public class Token implements Serializable {
+//    用户id（主键）
     private String userId;
     private String token;
     private Date createTime;
     private Date updateTime;
+//    存货时间 过期更换token
+    private Long expire;
+
+    public Long getExpire() {
+        return expire;
+    }
+
+    public void setExpire(Long expire) {
+        this.expire = expire;
+    }
 
     public String getUserId() {
         return userId;

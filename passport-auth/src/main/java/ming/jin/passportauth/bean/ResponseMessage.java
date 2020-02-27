@@ -2,16 +2,40 @@ package ming.jin.passportauth.bean;
 
 /**
  * @author Haokun
- * @date 2020/2/26 16:27
- * <p>
- * LoginModule
+ *
+ * 响应信息
  */
 
-public class AuthResult {
+public class ResponseMessage {
 
     private String userId;
     private String token;
     private String userName;
+
+    /**
+     * code 状态码
+     * message 状态信息
+     */
+    private String code;
+    private String message;
+
+
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
     public String getUserId() {
         return userId;

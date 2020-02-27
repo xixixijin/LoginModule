@@ -13,10 +13,10 @@ import org.apache.ibatis.annotations.Update;
  */
 @Mapper
 public interface TokenMapper {
-    @Select("select token from __")
+    @Select("select token from token where user_id=#{userId}")
     String getToken(String userId);
 
-    @Insert("insert into __ where ")
+    @Insert("insert into token (user_id,token,create_time,update_time,expire) values(#{userId},#{token},now(),now(),#{expire} ")
     Integer insert(String userId,String token,long expire);
 
     @Update("update __ set token=#{token} where user_id=#{userId}")

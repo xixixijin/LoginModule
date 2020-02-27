@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 /**
  * @author Haokun
  * @date 2020/2/26 16:51
- * <p>
- * LoginModule
+ *
+ * token 持久化到mysql中
  */
 @Service
 public class MysqlTokenService implements TokenService{
@@ -31,7 +31,6 @@ public class MysqlTokenService implements TokenService{
     @Override
     public Integer updateToken(String userId, String token) {
         Integer count=tokenMapper.updateToken(userId,token);
-
         return count;
     }
 }
